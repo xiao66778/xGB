@@ -50,20 +50,14 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/CNHM/asg/refs/heads/m
     end
 })
 
-local Slider = Tab:Slider({
-    Title = "Slider",
-    
-    -- To make float number supported, 
-    -- make the Step a float number.
-    -- example: Step = 0.1
-    Step = 1,
-    
-    Value = {
-        Min = 20,
-        Max = 120,
-        Default = 70,
-    },
-    Callback = function(value)
-game.Workspace.Gravity = Value
+local Input = Tab:Input({
+    Title = "Input",
+    Desc = "Input Description",
+    Value = "Default value",
+    InputIcon = "bird",
+    Type = "Input", -- or "Textarea"
+    Placeholder = "Enter text...",
+    Callback = function(input) 
+		game.Workspace.Gravity = Value
     end
 })
