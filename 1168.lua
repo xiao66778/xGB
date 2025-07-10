@@ -94,3 +94,22 @@ local Slider = Tab:Slider({
 		game.Workspace.Gravity = Value
     end
 })
+
+WindUI:Popup({
+    Title = "注入器",
+    Icon = "info",
+    Content = "注入器:"," "..identifyexecutor().."",
+    Buttons = {
+        {
+            Title = "Cancel",
+            Callback = function() end,
+            Variant = "Tertiary",
+        },
+        {
+            Title = "Continue",
+            Icon = "arrow-right",
+            Callback = function() end,
+            Variant = "Primary",
+        }
+    }
+})
