@@ -50,11 +50,12 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/CNHM/asg/refs/heads/m
     end
 })
 
-player:AddTextbox({
-	Name = "重力设置",
-	Default = "",
-	TextDisappear = true,
-	Callback = function(Value)
-		game.Workspace.Gravity = Value
+local Button = Tab:Button({
+    Title = "牛逼",
+    Desc = "没有",
+    Locked = false,
+    Callback = function(Value)
+game.Workspace.Gravity = Value
 	end
+     end 
 })
