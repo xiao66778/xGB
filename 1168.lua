@@ -29,8 +29,8 @@ Window:EditOpenButton({
     CornerRadius = UDim.new(0,16),
     StrokeThickness = 2,
     Color = ColorSequence.new( -- gradient
-        Color3.fromHex("FF0F7B"), 
-        Color3.fromHex("F89B29")
+        Color3.fromHex("6E94FF"), 
+        Color3.fromHex("73E8FF")
     ),
     OnlyMobile = false,
     Enabled = true,
