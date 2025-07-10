@@ -1,13 +1,13 @@
-local WindUI = loadstring(game:HttpGet("https://raw.githubusercontent.com/xiao66778/xGB/refs/heads/main/mainNB.lua"))()
+local WindUI = loadstring(game:HttpGet("https://raw.githubusercontent.com/xiao66778/xGB/refs/heads/main/main.lua"))()
 
 local Window = WindUI:CreateWindow({
     Title = "UI Title",
     Icon = "door-open",
     Author = "Example UI",
     Folder = "CloudHub",
-    Size = UDim2.fromOffset(580, 460),
+    Size = UDim2.fromOffset(400, 300),
     Transparent = true,
-    Theme = "Dark",
+    Theme = "Sky",
     Resizable = true,
     SideBarWidth = 200,
     Background = "", -- rbxassetid only
@@ -31,6 +31,7 @@ Window:EditOpenButton({
     Color = ColorSequence.new( -- gradient
         Color3.fromHex("6E94FF"), 
         Color3.fromHex("73E8FF")
+        Color3.fromHex("0800FF")
     ),
     OnlyMobile = false,
     Enabled = true,
@@ -45,7 +46,7 @@ local Button = Tab:Button({
     Title = "Button",
     Desc = "Test Button",
     Locked = false,
-    Callback = function()         
-loadstring(game:HttpGet("https://raw.githubusercontent.com/CNHM/asg/refs/heads/main/hm.lua"))()
+    Callback = function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/canxiaoxue666/SnowHubDemo/refs/heads/main/SnowHub"))()
     end
 })
