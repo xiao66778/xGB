@@ -61,36 +61,3 @@ local Input = Tab:Input({
 		game.Workspace.Gravity = Value
     end
 })
-
-local Toggle = Tab:Toggle({
-    Title = "Toggle",
-    Desc = "Toggle Description",
-    Icon = "bird",
-    Type = "Checkbox",
-    Default = false,
-    Callback = function(state) 
-                if Value then
-                    game.Lighting.Ambient = Color3.new(1, 1, 1)
-                else
-                    game.Lighting.Ambient = Color3.new(0, 0, 0)
-                end
-    end
-})
-
-local Slider = Tab:Slider({
-    Title = "重力设置(滑动)",
-    
-    -- To make float number supported, 
-    -- make the Step a float number.
-    -- example: Step = 0.1
-    Step = 1,
-    
-    Value = {
-        Min = 20,
-        Max = 120,
-        Default = 70,
-    },
-    Callback = function(Value)
-		game.Workspace.Gravity = Value
-    end
-})
