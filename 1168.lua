@@ -2,7 +2,7 @@ local WindUI = loadstring(game:HttpGet("https://raw.githubusercontent.com/xiao66
 
 local Window = WindUI:CreateWindow({
     Title = "UI Title",
-    Icon = "door-open",
+    Icon = "moon",
     Author = "Example UI",
     Folder = "CloudHub",
     Size = UDim2.fromOffset(400, 300),
@@ -31,7 +31,6 @@ Window:EditOpenButton({
     Color = ColorSequence.new( -- gradient
         Color3.fromHex("6E94FF"), 
         Color3.fromHex("73E8FF")
-        Color3.fromHex("0800FF")
     ),
     OnlyMobile = false,
     Enabled = true,
