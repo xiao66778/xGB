@@ -65,6 +65,5 @@ local Slider = Tab:Slider({
     },
     Callback = function(value)
 game.Workspace.Gravity = Value
-	end
     end
 })
