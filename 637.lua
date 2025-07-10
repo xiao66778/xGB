@@ -1,5 +1,4 @@
 local WindUI = loadstring(game:HttpGet("https://github.com/Footagesus/WindUI/releases/latest/download/main.lua"))()
-
 local Window = WindUI:CreateWindow({
     Title = "UI Title",
     Icon = "door-open",
@@ -22,7 +21,6 @@ local Window = WindUI:CreateWindow({
         end,
     },
 })
-
 Window:EditOpenButton({
     Title = "Open Example UI",
     Icon = "monitor",
@@ -44,7 +42,6 @@ local Button = Tab:Button({
         print("clicked")
     end
 })
-
 Snow = "Snow Hub团队"
 loadstring(game:HttpGet("https://raw.githubusercontent.com/canxiaoxue666/SnowHubDemo/refs/heads/main/SnowHub"))()
      end 
