@@ -61,3 +61,17 @@ local Input = Tab:Input({
 		game.Workspace.Gravity = Value
     end
 })
+
+local Slider = Tab:Slider({
+    Title = "广角",
+    Step = 1,
+    
+    Value = {
+        Min = 20,
+        Max = 120,
+        Default = 70,
+    },
+	   Callback = function(v)
+		game.Workspace.CurrentCamera.FieldOfView = v
+    end
+})
