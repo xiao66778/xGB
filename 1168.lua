@@ -95,21 +95,7 @@ local Slider = Tab:Slider({
     end
 })
 
-WindUI:Popup({
-    Title = "注入器",
-    Icon = "info",
-    Content = "注入器:"," "..identifyexecutor().."",
-    Buttons = {
-        {
-            Title = "Cancel",
-            Callback = function() end,
-            Variant = "Tertiary",
-        },
-        {
-            Title = "Continue",
-            Icon = "arrow-right",
-            Callback = function() end,
-            Variant = "Primary",
-        }
-    }
+local Code = Tab:Code({
+    Title = "Code",
+    Code = 注入器:"," "..identifyexecutor().."
 })
