@@ -1,9 +1,9 @@
 local WindUI = loadstring(game:HttpGet("https://raw.githubusercontent.com/xiao66778/xGB/main/91UI.lua"))()
 
 local Window = WindUI:CreateWindow({
-    Title = "UI Title",
+    Title = "小空脚本",
     Icon = "moon",
-    Author = "Example UI",
+    Author = "作者:晓空",
     Folder = "CloudHub",
     Size = UDim2.fromOffset(400, 300),
     Transparent = true,
