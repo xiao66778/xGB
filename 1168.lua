@@ -51,7 +51,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/CNHM/asg/refs/heads/m
 })
 
 local Input = Tab:Input({
-    Title = "Input",
+    Title = "重力设置",
     Desc = "Input Description",
     Value = "Default value",
     InputIcon = "bird",
@@ -74,5 +74,23 @@ local Toggle = Tab:Toggle({
                 else
                     game.Lighting.Ambient = Color3.new(0, 0, 0)
                 end
+    end
+})
+
+local Slider = Tab:Slider({
+    Title = "重力设置(滑动)",
+    
+    -- To make float number supported, 
+    -- make the Step a float number.
+    -- example: Step = 0.1
+    Step = 1,
+    
+    Value = {
+        Min = 20,
+        Max = 120,
+        Default = 70,
+    },
+    Callback = function(Value)
+		game.Workspace.Gravity = Value
     end
 })
