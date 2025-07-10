@@ -46,6 +46,11 @@ Window:EditOpenButton({
     Enabled = true,
     Draggable = true,
 })
+local Tab = Window:Tab({
+    Title = "Tab Title",
+    Icon = "bird",
+    Locked = false,
+})
 local Button = Tab:Button({
     Title = "Button",
     Desc = "Test Button",
