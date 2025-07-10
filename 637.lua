@@ -1,51 +1,33 @@
-local WindUI = loadstring(game:HttpGet("https://raw.githubusercontent.com/xiao66778/xGB/refs/heads/main/main.lua"))()
+local WindUI = loadstring(game:HttpGet("https://raw.githubusercontent.com/DevSloPo/Main/refs/heads/main/main.lua"))()
 
 local Window = WindUI:CreateWindow({
-    Title = "UI Title",
-    Icon = "door-open",
-    Author = "Example UI",
+    Title = "小空脚本",
+    Icon = "moon",
+    Author = "作者:晓空",
     Folder = "CloudHub",
-    Size = UDim2.fromOffset(580, 460),
+    Size = UDim2.fromOffset(400, 300),
     Transparent = true,
-    Theme = "Dark",
-    Resizable = true,
-    SideBarWidth = 200,
-    Background = "", -- rbxassetid only
-    BackgroundImageTransparency = 0.42,
-    HideSearchBar = true,
-    ScrollBarEnabled = false,
+    Theme = "Sky",
     User = {
-        Enabled = true,
-        Anonymous = true,
-        Callback = function()
-            print("clicked")
-        end,
-    },
-    KeySystem = { -- <- ↓ remove this all, if you dont neet the key system
-        Key = { "1234", "5678" },
-        Note = "Example Key System.",
-        Thumbnail = {
-            Image = "rbxassetid://",
-            Title = "Thumbnail",
-        },
-        URL = "https://github.com/Footagesus/WindUI",
-        SaveKey = true,
+        Enabled = true, 
+        Callback = function() print("clicked") end, 
+        Anonymous = true 
     },
 })
 
 Window:EditOpenButton({
-    Title = "Open Example UI",
-    Icon = "monitor",
+    Title = "      开/关UI      ",
+    Icon = "eye",
     CornerRadius = UDim.new(0,16),
     StrokeThickness = 2,
-    Color = ColorSequence.new( -- gradient
-        Color3.fromHex("FF0F7B"), 
-        Color3.fromHex("F89B29")
+    Color = ColorSequence.new( 
+        Color3.fromHex("FF00FF"), 
+        Color3.fromHex("00FFFF"), 
+        Color3.fromHex("800080")   
     ),
-    OnlyMobile = false,
-    Enabled = true,
     Draggable = true,
 })
+
 local Tab = Window:Tab({
     Title = "Tab Title",
     Icon = "bird",
