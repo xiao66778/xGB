@@ -57,7 +57,22 @@ local Input = Tab:Input({
     InputIcon = "bird",
     Type = "Input", -- or "Textarea"
     Placeholder = "Enter text...",
-    Callback = function(input) 
+    Callback = function(Value) 
 		game.Workspace.Gravity = Value
+    end
+})
+
+local Toggle = Tab:Toggle({
+    Title = "Toggle",
+    Desc = "Toggle Description",
+    Icon = "bird",
+    Type = "Checkbox",
+    Default = false,
+    Callback = function(state) 
+                if Value then
+                    game.Lighting.Ambient = Color3.new(1, 1, 1)
+                else
+                    game.Lighting.Ambient = Color3.new(0, 0, 0)
+                end
     end
 })
