@@ -94,8 +94,3 @@ local Slider = Tab:Slider({
 		game.Workspace.Gravity = Value
     end
 })
-
-local Code = Tab:Code({
-    Title = "Code",
-    Code = 注入器:"," "..identifyexecutor().."
-})
