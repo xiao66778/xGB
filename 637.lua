@@ -1,4 +1,5 @@
 local WindUI = loadstring(game:HttpGet("https://github.com/Footagesus/WindUI/releases/latest/download/main.lua"))()
+
 local Window = WindUI:CreateWindow({
     Title = "UI Title",
     Icon = "door-open",
@@ -20,7 +21,18 @@ local Window = WindUI:CreateWindow({
             print("clicked")
         end,
     },
+    KeySystem = { -- <- ↓ remove this all, if you dont neet the key system
+        Key = { "1234", "5678" },
+        Note = "Example Key System.",
+        Thumbnail = {
+            Image = "rbxassetid://",
+            Title = "Thumbnail",
+        },
+        URL = "https://github.com/Footagesus/WindUI",
+        SaveKey = true,
+    },
 })
+
 Window:EditOpenButton({
     Title = "Open Example UI",
     Icon = "monitor",
