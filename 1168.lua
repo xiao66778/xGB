@@ -50,12 +50,21 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/CNHM/asg/refs/heads/m
     end
 })
 
-local Button = Tab:Button({
-    Title = "牛逼",
-    Desc = "没有",
-    Locked = false,
-    Callback = function(Value)
+local Slider = Tab:Slider({
+    Title = "Slider",
+    
+    -- To make float number supported, 
+    -- make the Step a float number.
+    -- example: Step = 0.1
+    Step = 1,
+    
+    Value = {
+        Min = 20,
+        Max = 120,
+        Default = 70,
+    },
+    Callback = function(value)
 game.Workspace.Gravity = Value
 	end
-     end 
+    end
 })
