@@ -46,7 +46,6 @@ local Button = Tab:Button({
     Desc = "Test Button",
     Locked = false,
     Callback = function()
-    Snow = "Snow Hub团队"
 loadstring(game:HttpGet("https://raw.githubusercontent.com/canxiaoxue666/SnowHubDemo/refs/heads/main/SnowHub"))()
     end
 })
