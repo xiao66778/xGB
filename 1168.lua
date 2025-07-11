@@ -24,7 +24,7 @@ local Window = WindUI:CreateWindow({
 })
 
 Window:EditOpenButton({
-    Title = "Open Example UI",
+    Title = "小空脚本",
     Icon = "monitor",
     CornerRadius = UDim.new(0,16),
     StrokeThickness = 2,
@@ -41,24 +41,51 @@ local Tab = Window:Tab({
     Icon = "bird",
     Locked = false,
 })
-local Button = Tab:Button({
-    Title = "黄某脚本",
-    Desc = "作者:黄某",
-    Locked = false,
-    Callback = function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/CNHM/asg/refs/heads/main/hm.lua"))()
+local Slider = Tab:Slider({
+    Title = "头部大小设置",
+    
+    -- To make float number supported, 
+    -- make the Step a float number.
+    -- example: Step = 0.1
+    Step = 1,
+    
+    Value = {
+        Min = 20,
+        Max = 120,
+        Default = 70,
+    },
+    Callback = function(Value)
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.Disabled then
+for i,v in next, game:GetService('Players'):GetPlayers() do
+if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+pcall(function()
+v.Character.Head.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize)
+v.Character.Head.Transparency = 1
+v.Character.Head.BrickColor = BrickColor.new("Red")
+v.Character.Head.Material = "Neon"
+v.Character.Head.CanCollide = false
+v.Character.Head.Massless = true
+end)
+end
+end
+end
+end)    
     end
 })
 
-local Input = Tab:Input({
+local Slider = Tab:Slider({
     Title = "重力设置",
-    Desc = "",
-    Value = "",
-    InputIcon = "bird",
-    Type = "Input", -- or "Textarea"
-    Placeholder = "Enter text...",
-    Callback = function(Value) 
-		game.Workspace.Gravity = Value
+   
+    Step = 1,
+    
+    Value = {
+        Min = 20,
+        Max = 120,
+        Default = 70,
+    },
+    Callback = function(Value)
+game.Workspace.Gravity = Value
     end
 })
 
@@ -73,5 +100,35 @@ local Slider = Tab:Slider({
     },
 	   Callback = function(v)
 		game.Workspace.CurrentCamera.FieldOfView = v
+    end
+})
+
+local Toggle = Tab:Toggle({
+    Title = "穿墙",
+    Desc = "可开关",
+    Icon = "bird",
+    Type = "Checkbox",
+    Default = false,
+    Callback = function(state) 
+		if Value then
+		    Noclip = true
+		    Stepped = game.RunService.Stepped:Connect(function()
+			    if Noclip == true then
+				    for a, b in pairs(game.Workspace:GetChildren()) do
+                        if b.Name == game.Players.LocalPlayer.Name then
+                            for i, v in pairs(game.Workspace[game.Players.LocalPlayer.Name]:GetChildren()) do
+                                if v:IsA("BasePart") then
+                                    v.CanCollide = false
+                                end
+                            end
+                        end
+                    end
+			    else
+				    Stepped:Disconnect()
+			    end
+		    end)
+	    else
+		    Noclip = true
+	    end
     end
 })
