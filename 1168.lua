@@ -45,7 +45,7 @@ local Tab = Window:Tab({
 })
 
 local Section = Tab:Section({ 
-    Title = "Section",
+    Title = "您的注入器:"," "..identifyexecutor().."",
     TextXAlignment = "Left",
     TextSize = 17, -- Default Size
 })
