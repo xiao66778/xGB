@@ -44,10 +44,8 @@ local Tab = Window:Tab({
     Locked = false,
 })
 
-local Section = Window:Section({
-    Title = "你的注入器",
-    Icon = "bird",
-    Opened = true,
+local Input = Tab:Input({
+    Title = "最大视野设置",
 })
 local Tab = Window:Tab({
     Title = "通用",
