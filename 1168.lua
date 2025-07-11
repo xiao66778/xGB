@@ -44,10 +44,25 @@ local Tab = Window:Tab({
     Locked = false,
 })
 
-local Input = Tab:Butto({
-    Title = "最大视野设置",
+local Dialog = Window:Dialog({
+    Icon = "bird",
+    Title = "Dialog Title",
+    Content = "Content Text",
+    Buttons = {
+        {
+            Title = "Confirm",
+            Callback = function()
+                print("Confirmed!")
+            end,
+        },
+        {
+            Title = "Cancel",
+            Callback = function()
+                print("Cancelled!")
+            end,
+        },
+    },
 })
-
 local Tab = Window:Tab({
     Title = "通用",
     Icon = "bird",
