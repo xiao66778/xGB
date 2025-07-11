@@ -27,7 +27,7 @@ Window:EditOpenButton({
     Title = "小空脚本",
     Icon = "monitor",
     CornerRadius = UDim.new(0,60),
-    StrokeThickness = 6,
+    StrokeThickness = 5，
     Color = ColorSequence.new( -- gradient
         Color3.fromHex("6E94FF"), 
         Color3.fromHex("73E8FF"),
