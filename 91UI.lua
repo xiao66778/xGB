@@ -6798,7 +6798,7 @@ if not n then
 n=not n
 o.WindUI:Notify{
 Title="最小化",
-Content="您已关闭窗口 "..K,
+Content="您已闭窗口 "..K,
 Icon="关闭",
 Duration=5,
 }
@@ -7259,7 +7259,7 @@ Title="关闭窗口",
 Content="是否要关闭此窗口？您将无法再次打开它。",
 Buttons={
 {
-Title="Cancel",
+Title="取消",
 
 Callback=function()end,
 Variant="Secondary",
