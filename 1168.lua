@@ -37,13 +37,13 @@ Window:EditOpenButton({
     Draggable = true,
 })
 local Tab = Window:Tab({
-    Title = "Tab Title",
+    Title = "通用",
     Icon = "bird",
     Locked = false,
 })
 local Button = Tab:Button({
-    Title = "Button",
-    Desc = "Test Button",
+    Title = "黄某脚本",
+    Desc = "作者:黄某",
     Locked = false,
     Callback = function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/CNHM/asg/refs/heads/main/hm.lua"))()
@@ -52,8 +52,8 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/CNHM/asg/refs/heads/m
 
 local Input = Tab:Input({
     Title = "重力设置",
-    Desc = "Input Description",
-    Value = "Default value",
+    Desc = "",
+    Value = "",
     InputIcon = "bird",
     Type = "Input", -- or "Textarea"
     Placeholder = "Enter text...",
@@ -63,7 +63,7 @@ local Input = Tab:Input({
 })
 
 local Slider = Tab:Slider({
-    Title = "广角",
+    Title = "广角设置",
     Step = 1,
     
     Value = {
