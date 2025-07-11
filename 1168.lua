@@ -44,19 +44,6 @@ local Tab = Window:Tab({
     Locked = false,
 })
 
-local Paragraph = Tab:Paragraph({
-    Title = "你的注入器",
-    Desc = "",
-    Color = "blue",
-    Image = "",
-    ImageSize = 30,
-    Thumbnail = "",
-    ThumbnailSize = 80,
-    Locked = false,
-        }
-    }
-})
-
 local Tab = Window:Tab({
     Title = "通用",
     Icon = "star",
