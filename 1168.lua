@@ -46,7 +46,7 @@ local Tab = Window:Tab({
 
 local Tab = Window:Tab({
     Title = "通用",
-    Icon = "bird",
+    Icon = "star",
     Locked = false,
 })
 
