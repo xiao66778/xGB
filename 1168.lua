@@ -10,7 +10,7 @@ local Window = WindUI:CreateWindow({
     Theme = "Sky",
     Resizable = true,
     SideBarWidth = 200,
-    Background = "", -- rbxassetid only
+    Background = "rbxassetid=117787848613741", -- rbxassetid only
     BackgroundImageTransparency = 0.42,
     HideSearchBar = true,
     ScrollBarEnabled = false,
