@@ -7255,8 +7255,8 @@ p:CreateTopbarButton("Close","x",function()
 g(p.UIElements.Main,0.35,{Position=UDim2.new(0.5,0,0.5,0)},Enum.EasingStyle.Quint,Enum.EasingDirection.Out):Play()
 p:Dialog{
 
-Title="Close Window",
-Content="Do you want to close this window? You will not be able to open it again.",
+Title="关闭窗口",
+Content="是否要关闭此窗口？您将无法再次打开它。",
 Buttons={
 {
 Title="Cancel",
@@ -7265,7 +7265,7 @@ Callback=function()end,
 Variant="Secondary",
 },
 {
-Title="Close Window",
+Title="关闭窗口",
 
 Callback=function()p:Close():Destroy()end,
 Variant="Primary",
@@ -7539,7 +7539,7 @@ e.WindUI=aa
 e.Parent=aa.ScreenGui.Window
 
 if aa.Window then
-warn"You cannot create more than one window"
+warn"你不能创建多个窗口"
 return
 end
 
