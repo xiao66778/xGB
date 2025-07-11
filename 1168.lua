@@ -47,6 +47,7 @@ local Tab = Window:Tab({
 local Input = Tab:Butto({
     Title = "最大视野设置",
 })
+
 local Tab = Window:Tab({
     Title = "通用",
     Icon = "bird",
