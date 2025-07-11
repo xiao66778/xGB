@@ -44,10 +44,10 @@ local Tab = Window:Tab({
     Locked = false,
 })
 
-local Tab = Window:Tab({
+local Section = Window:Section({
     Title = "你的注入器",
     Icon = "bird",
-    Locked = false,
+    Opened = true,
 })
 local Tab = Window:Tab({
     Title = "通用",
