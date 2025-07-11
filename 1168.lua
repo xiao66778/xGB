@@ -40,7 +40,7 @@ Window:EditOpenButton({
 
 local Tab = Window:Tab({
     Title = "通用",
-    Icon = "rbxassetid://117787848613741",
+    Icon = "star",
     Locked = false,
 })
 
