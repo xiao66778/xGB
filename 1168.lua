@@ -45,9 +45,9 @@ local Tab = Window:Tab({
 })
 
 local Paragraph = Tab:Paragraph({
-    Title = "Paragraph with Image, Thumbnail, Buttons",
-    Desc = "Test Paragraph",
-    Color = "Red",
+    Title = "你的注入器",
+    Desc = "",
+    Color = "blue",
     Image = "",
     ImageSize = 30,
     Thumbnail = "",
@@ -55,9 +55,6 @@ local Paragraph = Tab:Paragraph({
     Locked = false,
     Buttons = {
         {
-            Icon = "bird",
-            Title = "Button",
-            Callback = function() print("1 Button") end,
         }
     }
 })
