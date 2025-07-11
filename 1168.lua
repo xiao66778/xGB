@@ -37,6 +37,18 @@ Window:EditOpenButton({
     Enabled = true,
     Draggable = true,
 })
+
+local Tab = Window:Tab({
+    Title = "信息",
+    Icon = "bird",
+    Locked = false,
+})
+
+local Tab = Window:Tab({
+    Title = "你的注入器",
+    Icon = "bird",
+    Locked = false,
+})
 local Tab = Window:Tab({
     Title = "通用",
     Icon = "bird",
