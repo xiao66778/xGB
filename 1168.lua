@@ -61,6 +61,7 @@ local Paragraph = Tab:Paragraph({
         }
     }
 })
+
 local Tab = Window:Tab({
     Title = "通用",
     Icon = "star",
