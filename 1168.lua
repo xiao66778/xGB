@@ -39,33 +39,8 @@ Window:EditOpenButton({
 })
 
 local Tab = Window:Tab({
-    Title = "信息",
-    Icon = "star",
-    Locked = false,
-})
-
-local Paragraph = Tab:Paragraph({
-    Title = "Paragraph with Image, Thumbnail, Buttons",
-    Desc = "Test Paragraph",
-    Color = "blue",
-    Image = "",
-    ImageSize = 30,
-    Thumbnail = "",
-    ThumbnailSize = 80,
-    Locked = false,
-    Buttons = {
-        {
-            Icon = "bird",
-            Title = "Button",
-loadstring(game:HttpGet("https://raw.githubusercontent.com/xiao66778/xGB/refs/heads/main/1168.lua"))()
- end,
-        }
-    }
-})
-
-local Tab = Window:Tab({
     Title = "通用",
-    Icon = "star",
+    Icon = "rbxassetid://117787848613741",
     Locked = false,
 })
 
