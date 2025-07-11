@@ -25,7 +25,7 @@ local Window = WindUI:CreateWindow({
 
 Window:EditOpenButton({
     Title = "小空脚本",
-    Icon = "monitor",
+    Icon = "cell phone",
     CornerRadius = UDim.new(0,16),
     StrokeThickness = 2,
     Color = ColorSequence.new( -- gradient
@@ -40,7 +40,7 @@ Window:EditOpenButton({
 
 local Tab = Window:Tab({
     Title = "信息",
-    Icon = "bird",
+    Icon = "star",
     Locked = false,
 })
 
