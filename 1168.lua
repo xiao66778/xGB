@@ -171,21 +171,9 @@ local Slider = Tab:Slider({
 })
 
 local Input = Tab:Input({
-    Title = "跳跃高度设置",
-    Desc = "",
-    Value = "Default value",
-    InputIcon = "bird",
-    Type = "Input", -- or "Textarea"
-    Placeholder = "Enter text...",
-    Callback = function(Value)
-game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
-    end
-})
-
-local Input = Tab:Input({
     Title = "移动速度设置",
     Desc = "",
-    Value = "",
+    Value = "70",
     InputIcon = "bird",
     Type = "Input", -- or "Textarea"
     Placeholder = "Enter text...",
@@ -197,7 +185,7 @@ game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
 local Input = Tab:Input({
     Title = "最大视野设置",
     Desc = "",
-    Value = "",
+    Value = "70",
     InputIcon = "bird",
     Type = "Input", -- or "Textarea"
     Placeholder = "Enter text...",
