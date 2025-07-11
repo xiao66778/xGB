@@ -26,8 +26,8 @@ local Window = WindUI:CreateWindow({
 Window:EditOpenButton({
     Title = "小空脚本",
     Icon = "monitor",
-    CornerRadius = UDim.new(0,16),
-    StrokeThickness = 2，
+    CornerRadius = UDim.new(0,60),
+    StrokeThickness = 4,
     Color = ColorSequence.new( -- gradient
         Color3.fromHex("6E94FF"), 
         Color3.fromHex("73E8FF"),
