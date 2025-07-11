@@ -41,73 +41,13 @@ local Tab = Window:Tab({
     Icon = "bird",
     Locked = false,
 })
-local Slider = Tab:Slider({
-    Title = "头部大小设置",
-    
-    Step = 1,
-    
-    Value = {
-        Min = 20,
-        Max = 120,
-        Default = 70,
-    },
-    Callback = function(Value)
-game:GetService('RunService').RenderStepped:connect(function()
-if _G.Disabled then
-for i,v in next, game:GetService('Players'):GetPlayers() do
-if v.Name ~= game:GetService('Players').LocalPlayer.Name then
-pcall(function()
-v.Character.Head.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize)
-v.Character.Head.Transparency = 1
-v.Character.Head.BrickColor = BrickColor.new("Red")
-v.Character.Head.Material = "Neon"
-v.Character.Head.CanCollide = false
-v.Character.Head.Massless = true
-end)
-end
-end
-end
-end)    
-    end
-})
 
-local Slider = Tab:Slider({
-    Title = "重力设置",
-   
-    Step = 1,
-    
-    Value = {
-        Min = 20,
-        Max = 120,
-        Default = 70,
-    },
-    Callback = function(Value)
-game.Workspace.Gravity = Value
-    end
-})
-
-local Slider = Tab:Slider({
-    Title = "广角设置",
-    Step = 1,
-    
-    Value = {
-        Min = 20,
-        Max = 120,
-        Default = 70,
-    },
-	   Callback = function(v)
-		game.Workspace.CurrentCamera.FieldOfView = v
-    end
-})
-
-local Toggle = Tab:Toggle({
+local Button = Tab:Button({
     Title = "穿墙",
     Desc = "可开关",
-    Icon = "bird",
-    Type = "Checkbox",
-    Default = false,
-    Callback = function(Value) 
-	
+    Locked = false,
+    Callback = function(Value)
+
 		if Value then
 
 		    Noclip = true
@@ -148,8 +88,62 @@ local Toggle = Tab:Toggle({
 
 	    end
 
-	end
+    end
+})
+local Input = Tab:Input({
+    Title = "头部大小设置",
+    Desc = "设置你的头部大小",
+    Value = "",
+    InputIcon = "bird",
+    Type = "Input", -- or "Textarea"
+    Placeholder = "Enter text...",
+    Callback = function(Value) 
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.Disabled then
+for i,v in next, game:GetService('Players'):GetPlayers() do
+if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+pcall(function()
+v.Character.Head.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize)
+v.Character.Head.Transparency = 1
+v.Character.Head.BrickColor = BrickColor.new("Red")
+v.Character.Head.Material = "Neon"
+v.Character.Head.CanCollide = false
+v.Character.Head.Massless = true
+end)
+end
+end
+end
+end)    
+	   end
+})
 
+local Slider = Tab:Slider({
+    Title = "重力设置",
+   
+    Step = 1,
+    
+    Value = {
+        Min = 20,
+        Max = 120,
+        Default = 70,
+    },
+    Callback = function(Value)
+game.Workspace.Gravity = Value
+    end
+})
+
+local Slider = Tab:Slider({
+    Title = "广角设置",
+    Step = 1,
+    
+    Value = {
+        Min = 20,
+        Max = 120,
+        Default = 70,
+    },
+	   Callback = function(v)
+		game.Workspace.CurrentCamera.FieldOfView = v
+    end
 })
 
 local Slider = Tab:Slider({
