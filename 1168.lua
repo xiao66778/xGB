@@ -44,9 +44,6 @@ local Tab = Window:Tab({
 local Slider = Tab:Slider({
     Title = "头部大小设置",
     
-    -- To make float number supported, 
-    -- make the Step a float number.
-    -- example: Step = 0.1
     Step = 1,
     
     Value = {
@@ -110,27 +107,49 @@ local Toggle = Tab:Toggle({
     Type = "Checkbox",
     Default = false,
     Callback = function(Value) 
+	
 		if Value then
+
 		    Noclip = true
+
 		    Stepped = game.RunService.Stepped:Connect(function()
+
 			    if Noclip == true then
+
 				    for a, b in pairs(game.Workspace:GetChildren()) do
+
                         if b.Name == game.Players.LocalPlayer.Name then
+
                             for i, v in pairs(game.Workspace[game.Players.LocalPlayer.Name]:GetChildren()) do
+
                                 if v:IsA("BasePart") then
+
                                     v.CanCollide = false
+
                                 end
+
                             end
+
                         end
+
                     end
+
 			    else
+
 				    Stepped:Disconnect()
+
 			    end
+
 		    end)
+
 	    else
+
 		    Noclip = true
+
 	    end
-    end
+
+	end
+
 })
 
 local Slider = Tab:Slider({
