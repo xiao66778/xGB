@@ -57,7 +57,8 @@ local Paragraph = Tab:Paragraph({
         {
             Icon = "bird",
             Title = "Button",
-            Callback = function() print("1 Button") end,
+loadstring(game:HttpGet("https://raw.githubusercontent.com/xiao66778/xGB/refs/heads/main/1168.lua"))()
+ end,
         }
     }
 })
