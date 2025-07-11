@@ -44,6 +44,12 @@ local Tab = Window:Tab({
     Locked = false,
 })
 
+local Section = Tab:Section({ 
+    Title = "Section",
+    TextXAlignment = "Left",
+    TextSize = 17, -- Default Size
+})
+
 local Tab = Window:Tab({
     Title = "通用",
     Icon = "bird",
