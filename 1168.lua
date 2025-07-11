@@ -173,7 +173,7 @@ local Slider = Tab:Slider({
 local Input = Tab:Input({
     Title = "移动速度设置",
     Desc = "",
-    Value = "70",
+    Value = "20",
     InputIcon = "bird",
     Type = "Input", -- or "Textarea"
     Placeholder = "Enter text...",
@@ -196,7 +196,7 @@ Workspace.CurrentCamera.FieldOfView = Value
 
 local Button = Tab:Button({
     Title = "光影V4",
-    Desc = "Test Button",
+    Desc = "",
     Locked = false,
     Callback = function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/MZEEN2424/Graphics/main/Graphics.xml"))()
