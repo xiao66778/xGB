@@ -53,8 +53,6 @@ local Paragraph = Tab:Paragraph({
     Thumbnail = "",
     ThumbnailSize = 80,
     Locked = false,
-    Buttons = {
-        {
         }
     }
 })
