@@ -177,7 +177,7 @@ local Input = Tab:Input({
     Value = "20",
     InputIcon = "bird",
     Type = "Input", -- or "Textarea"
-    Placeholder = "Enter text...",
+    Placeholder = "请输入文本",
     Callback = function(Value) 
 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
     end
@@ -189,7 +189,7 @@ local Input = Tab:Input({
     Value = "70",
     InputIcon = "bird",
     Type = "Input", -- or "Textarea"
-    Placeholder = "Enter text...",
+    Placeholder = "请输入文本",
     Callback = function(Value) 
 Workspace.CurrentCamera.FieldOfView = Value
     end
