@@ -109,7 +109,7 @@ local Toggle = Tab:Toggle({
     Icon = "bird",
     Type = "Checkbox",
     Default = false,
-    Callback = function(state) 
+    Callback = function(Value) 
 		if Value then
 		    Noclip = true
 		    Stepped = game.RunService.Stepped:Connect(function()
@@ -130,5 +130,35 @@ local Toggle = Tab:Toggle({
 	    else
 		    Noclip = true
 	    end
+    end
+})
+
+local Slider = Tab:Slider({
+    Title = "跳跃高度设置",
+    
+    Step = 1,
+    
+    Value = {
+        Min = 20,
+        Max = 120,
+        Default = 70,
+    },
+    Callback = function(Value)
+game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
+    end
+})
+
+local Slider = Tab:Slider({
+    Title = "移动速度设置",
+   
+    Step = 1,
+    
+    Value = {
+        Min = 20,
+        Max = 120,
+        Default = 70,
+    },
+    Callback = function(Value)
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
     end
 })
