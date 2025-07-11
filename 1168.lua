@@ -156,8 +156,7 @@ local Slider = Tab:Slider({
         Max = 120,
         Default = 70,
     },
-    Callback = function(Value)
-game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
+	Callback = function(Value)		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
     end
 })
 
