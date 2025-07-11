@@ -43,134 +43,174 @@ local Tab = Window:Tab({
 })
 
 local Button = Tab:Button({
-    Title = "穿墙",
-    Desc = "可开关",
+    Title = "玩家加入游戏提示",
+    Desc = "",
     Locked = false,
-    Callback = function(Value)
-
-		if Value then
-
-		    Noclip = true
-
-		    Stepped = game.RunService.Stepped:Connect(function()
-
-			    if Noclip == true then
-
-				    for a, b in pairs(game.Workspace:GetChildren()) do
-
-                        if b.Name == game.Players.LocalPlayer.Name then
-
-                            for i, v in pairs(game.Workspace[game.Players.LocalPlayer.Name]:GetChildren()) do
-
-                                if v:IsA("BasePart") then
-
-                                    v.CanCollide = false
-
-                                end
-
-                            end
-
-                        end
-
-                    end
-
-			    else
-
-				    Stepped:Disconnect()
-
-			    end
-
-		    end)
-
-	    else
-
-		    Noclip = true
-
-	    end
-
+    Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/boyscp/scriscriptsc/main/bbn.lua"))()
     end
 })
+
+local Button = Tab:Button({
+    Title = "获得管理员权限",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+loadstring(game:HttpGet("https://pastebin.com/raw/sZpgTVas"))()
+    end
+})
+
+local Button = Tab:Button({
+    Title = "死亡笔记",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/dingding123hhh/tt/main/%E6%AD%BB%E4%BA%A1%E7%AC%94%E8%AE%B0%20(1).txt"))()
+    end
+})
+
+local Button = Tab:Button({
+    Title = "透视",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+    _G.FriendColor = Color3.fromRGB(0, 0, 255)
+        local function ApplyESP(v)
+       if v.Character and v.Character:FindFirstChildOfClass'Humanoid' then
+           v.Character.Humanoid.NameDisplayDistance = 9e9
+           v.Character.Humanoid.NameOcclusion = "NoOcclusion"
+           v.Character.Humanoid.HealthDisplayDistance = 9e9
+           v.Character.Humanoid.HealthDisplayType = "AlwaysOn"
+           v.Character.Humanoid.Health = v.Character.Humanoid.Health -- triggers changed
+       end
+    end
+    for i,v in pairs(game.Players:GetPlayers()) do
+       ApplyESP(v)
+       v.CharacterAdded:Connect(function()
+           task.wait(0.33)
+           ApplyESP(v)
+       end)
+    end
+    
+    game.Players.PlayerAdded:Connect(function(v)
+       ApplyESP(v)
+       v.CharacterAdded:Connect(function()
+           task.wait(0.33)
+           ApplyESP(v)
+       end)
+    end)
+    
+        local Players = game:GetService("Players"):GetChildren()
+    local RunService = game:GetService("RunService")
+    local highlight = Instance.new("Highlight")
+    highlight.Name = "Highlight"
+    
+    for i, v in pairs(Players) do
+        repeat wait() until v.Character
+        if not v.Character:FindFirstChild("HumanoidRootPart"):FindFirstChild("Highlight") then
+            local highlightClone = highlight:Clone()
+            highlightClone.Adornee = v.Character
+            highlightClone.Parent = v.Character:FindFirstChild("HumanoidRootPart")
+            highlightClone.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
+            highlightClone.Name = "Highlight"
+        end
+    end
+    
+    game.Players.PlayerAdded:Connect(function(player)
+        repeat wait() until player.Character
+        if not player.Character:FindFirstChild("HumanoidRootPart"):FindFirstChild("Highlight") then
+            local highlightClone = highlight:Clone()
+            highlightClone.Adornee = player.Character
+            highlightClone.Parent = player.Character:FindFirstChild("HumanoidRootPart")
+            highlightClone.Name = "Highlight"
+        end
+    end)
+    
+    game.Players.PlayerRemoving:Connect(function(playerRemoved)
+        playerRemoved.Character:FindFirstChild("HumanoidRootPart").Highlight:Destroy()
+    end)
+    
+    RunService.Heartbeat:Connect(function()
+        for i, v in pairs(Players) do
+            repeat wait() until v.Character
+            if not v.Character:FindFirstChild("HumanoidRootPart"):FindFirstChild("Highlight") then
+                local highlightClone = highlight:Clone()
+                highlightClone.Adornee = v.Character
+                highlightClone.Parent = v.Character:FindFirstChild("HumanoidRootPart")
+                highlightClone.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
+                highlightClone.Name = "Highlight"
+                task.wait()
+            end
+    end
+    end)
+    end
+})
+
+local Button = Tab:Button({
+    Title = "甩人",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+loadstring(game:HttpGet("https://pastebin.com/raw/zqyDSUWX"))()
+    end
+})
+
+local Slider = Tab:Slider({
+    Title = "重力设置",
+    
+    Step = 1,
+    
+    Value = {
+        Min = 20,
+        Max = 120,
+        Default = 70,
+    },
+    Callback = function(Value)
+		game.Workspace.Gravity = Value
+    end
+})
+
 local Input = Tab:Input({
-    Title = "头部大小设置",
-    Desc = "设置你的头部大小",
+    Title = "跳跃高度设置",
+    Desc = "",
+    Value = "Default value",
+    InputIcon = "bird",
+    Type = "Input", -- or "Textarea"
+    Placeholder = "Enter text...",
+    Callback = function(Value)
+game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
+    end
+})
+
+local Input = Tab:Input({
+    Title = "移动速度设置",
+    Desc = "",
     Value = "",
     InputIcon = "bird",
     Type = "Input", -- or "Textarea"
     Placeholder = "Enter text...",
     Callback = function(Value) 
-game:GetService('RunService').RenderStepped:connect(function()
-if _G.Disabled then
-for i,v in next, game:GetService('Players'):GetPlayers() do
-if v.Name ~= game:GetService('Players').LocalPlayer.Name then
-pcall(function()
-v.Character.Head.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize)
-v.Character.Head.Transparency = 1
-v.Character.Head.BrickColor = BrickColor.new("Red")
-v.Character.Head.Material = "Neon"
-v.Character.Head.CanCollide = false
-v.Character.Head.Massless = true
-end)
-end
-end
-end
-end)    
-	   end
-})
-
-local Slider = Tab:Slider({
-    Title = "重力设置",
-   
-    Step = 1,
-    
-    Value = {
-        Min = 20,
-        Max = 120,
-        Default = 70,
-    },
-    Callback = function(Value)
-game.Workspace.Gravity = Value
-    end
-})
-
-local Slider = Tab:Slider({
-    Title = "广角设置",
-    Step = 1,
-    
-    Value = {
-        Min = 20,
-        Max = 120,
-        Default = 70,
-    },
-	   Callback = function(v)
-		game.Workspace.CurrentCamera.FieldOfView = v
-    end
-})
-
-local Slider = Tab:Slider({
-    Title = "跳跃高度设置",
-    
-    Step = 1,
-    
-    Value = {
-        Min = 20,
-        Max = 120,
-        Default = 70,
-    },
-	Callback = function(Value)		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
-    end
-})
-
-local Slider = Tab:Slider({
-    Title = "移动速度设置",
-   
-    Step = 1,
-    
-    Value = {
-        Min = 20,
-        Max = 120,
-        Default = 70,
-    },
-    Callback = function(Value)
 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+    end
+})
+
+local Input = Tab:Input({
+    Title = "最大视野设置",
+    Desc = "",
+    Value = "",
+    InputIcon = "bird",
+    Type = "Input", -- or "Textarea"
+    Placeholder = "Enter text...",
+    Callback = function(Value) 
+Workspace.CurrentCamera.FieldOfView = Value
+    end
+})
+
+local Button = Tab:Button({
+    Title = "光影V4",
+    Desc = "Test Button",
+    Locked = false,
+    Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/MZEEN2424/Graphics/main/Graphics.xml"))()
     end
 })
