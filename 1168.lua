@@ -356,3 +356,18 @@ local Button = Tab:Button({
 loadstring(game:HttpGet("http://rawscripts.net/raw/Universal-Script-Touch-fling-script-22447"))()
     end
 })
+
+local Tab = Window:Tab({
+    Title = "死铁轨",
+    Icon = "Dead Rails",
+    Locked = false,
+})
+
+local Button = Tab:Button({
+    Title = "红叶",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+loadstring(game:HttpGet("https://xingtaiduan.pythonanywhere.com/Loader"))()
+    end
+})
