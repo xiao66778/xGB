@@ -31,7 +31,7 @@ Window:EditOpenButton({
     Color = ColorSequence.new( -- gradient
         Color3.fromHex("6E94FF"), 
         Color3.fromHex("73E8FF"),
-        Color3.fromHex("7B00FF")
+        Color3.fromHex("6F00E6")
     ),
     OnlyMobile = false,
     Enabled = true,
