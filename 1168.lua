@@ -306,24 +306,6 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/xiak27/637/refs/heads
 })
 
 local Button = Tab:Button({
-    Title = "透视2",
-    Desc = "",
-    Locked = false,
-    Callback = function()
-loadstring(game:HttpGet("https://pastebin.com/raw/uw2P2fbY"))()
-    end
-})
-
-local Button = Tab:Button({
-    Title = "飞车",
-    Desc = "",
-    Locked = false,
-    Callback = function()
-loadstring(game:HttpGet("https://pastebin.com/raw/G3GnBCyC", true))()
-    end
-})
-
-local Button = Tab:Button({
     Title = "穿墙",
     Desc = "",
     Locked = false,
