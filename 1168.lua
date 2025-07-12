@@ -359,7 +359,7 @@ loadstring(game:HttpGet("http://rawscripts.net/raw/Universal-Script-Touch-fling-
 
 local Tab = Window:Tab({
     Title = "死铁轨",
-    Icon = "Dead Rails",
+    Icon = "rail",
     Locked = false,
 })
 
