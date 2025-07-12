@@ -338,12 +338,3 @@ local Button = Tab:Button({
 loadstring(game:HttpGet("https://pastebin.com/raw/G2zb992X"))()
     end
 })
-
-local Button = Tab:Button({
-    Title = "飞车",
-    Desc = "",
-    Locked = false,
-    Callback = function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/xiak27/NB/refs/heads/main/%E9%A3%9E%E8%BD%A6.lua"))()
-    end
-})
