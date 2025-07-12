@@ -322,3 +322,21 @@ local Button = Tab:Button({
 loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/chillz-workshop/main/Arceus%20Aimbot.lua"))()  
     end
 })
+
+local Button = Tab:Button({
+    Title = "隐身",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+loadstring(game:HttpGet("https://gist.githubusercontent.com/skid123skidlol/cd0d2dce51b3f20ad1aac941da06a1a1/raw/f58b98cce7d51e53ade94e7bb460e4f24fb7e0ff/%257BFE%257D%2520Invisible%2520Tool%2520(can%2520hold%2520tools)"))()
+    end
+})
+
+local Button = Tab:Button({
+    Title = "查看游戏中的玩家和血条",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+loadstring(game:HttpGet("https://pastebin.com/raw/G2zb992X"))()
+    end
+})
