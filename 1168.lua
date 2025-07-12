@@ -207,21 +207,6 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/MZEEN2424/Graphics/ma
     end
 })
 
-local Toggle = Tab:Toggle({
-    Title = "夜视",
-    Desc = "",
-    Icon = "star",
-    Type = "Checkbox",
-    Default = false,
-    Callback = function() 
-		if Value then
-		    game.Lighting.Ambient = Color3.new(1, 1, 1)
-		else
-		    game.Lighting.Ambient = Color3.new(0, 0, 0)
-		end
-    end
-})
-
 local Button = Tab:Button({
     Title = "情云同款可调自瞄",
     Desc = "",
@@ -242,7 +227,7 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/0Ben1/fe/main/obf_rf6
 
 local Button = Tab:Button({
     Title = "电脑键盘",
-    Desc = "Test Button",
+    Desc = "",
     Locked = false,
     Callback = function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt", true))()
@@ -293,14 +278,65 @@ loadstring(game:HttpGet(("https://pastebin.com/raw/YNVbeqPy")))()
     end
 })
 
-local Toggle = Tab:Toggle({
+local Button = Tab:Button({
     Title = "无限跳",
     Desc = "",
-    Icon = "star",
-    Type = "Checkbox",
-    Default = false,
-    Callback = function(Value) 
+    Locked = false,
+    Callback = function()
 loadstring(game:HttpGet("https://pastebin.com/raw/V5PQy3y0", true))()
     end
 })
 
+local Button = Tab:Button({
+    Title = "替身",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/SkrillexMe/SkrillexLoader/main/SkrillexLoadMain')))()
+    end
+})
+
+local Button = Tab:Button({
+    Title = "晓空飞行",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/xiak27/637/refs/heads/main/xiaok.lua"))()
+    end
+})
+
+local Button = Tab:Button({
+    Title = "透视2",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+loadstring(game:HttpGet("https://pastebin.com/raw/uw2P2fbY"))()
+    end
+})
+
+local Button = Tab:Button({
+    Title = "飞车",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+loadstring(game:HttpGet("https://pastebin.com/raw/G3GnBCyC", true))()
+    end
+})
+
+local Button = Tab:Button({
+    Title = "穿墙",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/TtmScripter/OtherScript/main/Noclip"))()
+    end
+})
+
+local Button = Tab:Button({
+    Title = "阿尔宙斯自瞄",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/chillz-workshop/main/Arceus%20Aimbot.lua"))()  
+    end
+})
