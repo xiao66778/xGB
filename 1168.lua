@@ -338,3 +338,12 @@ local Button = Tab:Button({
 loadstring(game:HttpGet("https://pastebin.com/raw/G2zb992X"))()
     end
 })
+
+local Button = Tab:Button({
+    Title = "wi指令",
+    Desc = "Test Button",
+    Locked = false,
+    Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
+    end
+})
