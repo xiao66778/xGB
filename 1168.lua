@@ -363,11 +363,44 @@ local Tab = Window:Tab({
     Locked = false,
 })
 
+local Section = Tab:Section({ 
+    Title = "脚本中心",
+    TextXAlignment = "Left",
+    TextSize = 17,
+})
+
 local Button = Tab:Button({
     Title = "红叶",
     Desc = "",
     Locked = false,
     Callback = function()
 loadstring(game:HttpGet("https://xingtaiduan.pythonanywhere.com/Loader"))()
+    end
+})
+
+local Button = Tab:Button({
+    Title = "sans Hub",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/iopjklbnmsss/SansHubScript/refs/heads/main/SansHub"))()
+    end
+})
+
+local Button = Tab:Button({
+    Title = "TN Hub",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/thiennrb7/Script/refs/heads/main/Bringall"))()
+    end
+})
+
+local Button = Tab:Button({
+    Title = "Nat Hub",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ArdyBotzz/NatHub/refs/heads/master/NatHub.lua"))()
     end
 })
