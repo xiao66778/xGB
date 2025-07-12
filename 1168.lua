@@ -347,3 +347,12 @@ local Button = Tab:Button({
 loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
     end
 })
+
+local Button = Tab:Button({
+    Title = "甩飞2",
+    Desc = "需要自己走到别人身边",
+    Locked = false,
+    Callback = function()
+loadstring(game:HttpGet("http://rawscripts.net/raw/Universal-Script-Touch-fling-script-22447"))()
+    end
+})
