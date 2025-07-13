@@ -374,7 +374,7 @@ local Button = Tab:Button({
     Desc = "",
     Locked = false,
     Callback = function()
-loadstring(game:HttpGet(" https://getnative.cc/script/loader"))()
+loadstring(game:HttpGet("https://getnative.cc/script/loader"))()
     end
 })
 
