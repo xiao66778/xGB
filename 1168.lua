@@ -2,7 +2,7 @@ local WindUI = loadstring(game:HttpGet("https://raw.githubusercontent.com/xiao66
 
 local Window = WindUI:CreateWindow({
     Title = "小空脚本",
-    Icon = "Verificado",
+    Icon = "rbxassetid://129637502472493",
     Author = "作者:晓空",
     Folder = "CloudHub",
     Size = UDim2.fromOffset(400, 300),
