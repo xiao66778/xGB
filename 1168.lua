@@ -365,7 +365,7 @@ local Tab = Window:Tab({
 
 local Section = Tab:Section({ 
     Title = "脚本中心",
-    TextXAlignment = "Left",
+    TextXAlignment = "middle",
     TextSize = 17,
 })
 
@@ -416,7 +416,7 @@ loadstring(game:HttpGet("https://rawscripts.net/raw/Dead-Rails-Alpha-FLY-in-Dead
 
 local Section = Tab:Section({ 
     Title = "盲盒",
-    TextXAlignment = "Left",
+    TextXAlignment = "middle",
     TextSize = 17,
 })
 
@@ -521,7 +521,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Haxxxxxxxxxxxx/DeadRa
 
 local Section = Tab:Section({ 
     Title = "刷券",
-    TextXAlignment = "Left",
+    TextXAlignment = "middle",
     TextSize = 17,
 })
 
@@ -609,8 +609,99 @@ script_key = "DonjoSx_Was_Not_Here" -- Script key, don't remove this
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Umbrella-Scripter/Deadrails-Script/refs/heads/main/average-bond-farm.lua"))()
     end
 })
+
 local Tab = Window:Tab({
     Title = "种植花园",
     Icon = "flower-2",
     Locked = false,
+})
+
+local Button = Tab:Button({
+    Title = "脚本1",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+loadstring(game:HttpGet("https://rawscripts.net/raw/Grow-a-Garden-Dead-Rails-Inf-Seeds-Script-35617"))()
+    end
+})
+
+local Button = Tab:Button({
+    Title = "脚本2",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ZusumeHub/ZusumeHub/refs/heads/main/GZXAG7"))()
+    end
+})
+
+local Button = Tab:Button({
+    Title = "脚本3(玩家背包查看器)",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/whalekfc/GardenGrowScript/refs/heads/main/PlayerBackpackViewer.lua"))()
+    end
+})
+
+local Button = Tab:Button({
+    Title = "脚本4",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/MoziIOnTop/MoziIHub/refs/heads/main/GrowaGarden"))()
+    end
+})
+
+local Button = Tab:Button({
+    Title = "脚本5",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ThundarZ/Welcome/main/Main/GaG/Main.lua"))()
+    end
+})
+
+local Button = Tab:Button({
+    Title = "脚本6",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))()
+    end
+})
+
+local Button = Tab:Button({
+    Title = "脚本7",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+loadstring(game:HttpGet("https://lunor.dev/loader"))()
+    end
+})
+
+local Button = Tab:Button({
+    Title = "脚本8",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/GRPGaming/Key-System/refs/heads/Xycer-Hub-Script/GAZG9"))()
+    end
+})
+
+local Button = Tab:Button({
+    Title = "脚本9",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+loadstring(game:HttpGet("https://scripts.alchemyhub.xyz"))()
+    end
+})
+
+local Button = Tab:Button({
+    Title = "脚本10",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/iwantsom3/script/refs/heads/main/Gag"))()
+    end
 })
