@@ -365,7 +365,7 @@ local Tab = Window:Tab({
 
 local Section = Tab:Section({ 
     Title = "脚本中心",
-    TextXAlignment = "middle",
+    TextXAlignment = "Left",
     TextSize = 17,
 })
 
@@ -416,7 +416,7 @@ loadstring(game:HttpGet("https://rawscripts.net/raw/Dead-Rails-Alpha-FLY-in-Dead
 
 local Section = Tab:Section({ 
     Title = "盲盒",
-    TextXAlignment = "middle",
+    TextXAlignment = "Left",
     TextSize = 17,
 })
 
@@ -521,7 +521,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Haxxxxxxxxxxxx/DeadRa
 
 local Section = Tab:Section({ 
     Title = "刷券",
-    TextXAlignment = "middle",
+    TextXAlignment = "Left",
     TextSize = 17,
 })
 local Button = Tab:Button({
