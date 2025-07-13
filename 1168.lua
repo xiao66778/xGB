@@ -362,13 +362,11 @@ local Tab = Window:Tab({
     Icon = "train-track",
     Locked = false,
 })
-
 local Section = Tab:Section({ 
     Title = "脚本中心",
     TextXAlignment = "middle",
     TextSize = 17,
 })
-
 local Button = Tab:Button({
     Title = "红叶",
     Desc = "",
@@ -524,7 +522,6 @@ local Section = Tab:Section({
     TextXAlignment = "middle",
     TextSize = 17,
 })
-
 local Button = Tab:Button({
     Title = "刷券1",
     Desc = "",
@@ -617,7 +614,6 @@ local Tab = Window:Tab({
     Icon = "flower-2",
     Locked = false,
 })
-
 local Button = Tab:Button({
     Title = "脚本1",
     Desc = "",
