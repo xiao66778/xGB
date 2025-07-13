@@ -6,8 +6,8 @@ local Window = WindUI:CreateWindow({
     Author = "作者:晓空",
     Folder = "CloudHub",
     Size = UDim2.fromOffset(400, 300),
-    Transparent = true,
-    Theme = "Sky",
+    Transparent = false,
+    Theme = "Dark",
     Resizable = true,
     SideBarWidth = 200,
     Background = "", -- rbxassetid only
@@ -16,9 +16,9 @@ local Window = WindUI:CreateWindow({
     ScrollBarEnabled = false,
     User = {
         Enabled = true,
-        Anonymous = true,
+        Anonymous = false,
         Callback = function()
-            print("clicked")
+game.Players.LocalPlayer.Name
         end,
     },
 })
