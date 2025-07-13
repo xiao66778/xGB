@@ -405,6 +405,189 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/ArdyBotzz/NatHub/refs
     end
 })
 
+local Button = Tab:Button({
+    Title = "Moondiety",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+loadstring(game:HttpGet("https://rawscripts.net/raw/Dead-Rails-Alpha-FLY-in-Dead-Rails-One-Click-Script-KEYLESS-by-Moondiety-39179"))()
+    end
+})
+
+local Section = Tab:Section({ 
+    Title = "盲盒",
+    TextXAlignment = "Left",
+    TextSize = 17,
+})
+
+local Button = Tab:Button({
+    Title = "1",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/SpiderScriptRB/Dead-Rails-SpiderXHub-Script/refs/heads/main/SpiderXHub%202.0.txt"))()
+    end
+})
+
+local Button = Tab:Button({
+    Title = "2",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/debunked69/Solixreworkkeysystem/refs/heads/main/solix%20new%20keyui.lua"))()
+    end
+})
+
+local Button = Tab:Button({
+    Title = "3",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+loadstring(game:HttpGet("https://rawscripts.net/raw/Dead-Rails-Alpha-Best-keyless-op-script-insta-kill-mobs-31507"))()
+    end
+})
+
+local Button = Tab:Button({
+    Title = "4",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Markklol/aw/refs/heads/main/Protected/DRailsv2.lua'))()
+    end
+})
+
+local Button = Tab:Button({
+    Title = "5",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Dex-Bear/Vxezehub/refs/heads/main/VxezeHubMain"))()
+    end
+})
+
+local Button = Tab:Button({
+    Title = "6",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/hassanxzayn-lua/NEOXHUBMAIN/refs/heads/main/loader", true))()
+    end
+})
+
+local Button = Tab:Button({
+    Title = "7",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/e1cfd93b113a79773d93251b61af1e2f.lua"))()
+    end
+})
+
+local Button = Tab:Button({
+    Title = "8",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/tbao143/thaibao/refs/heads/main/TbaoHubDeadRails"))()
+    end
+})
+
+local Button = Tab:Button({
+    Title = "9",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Mrpopcatfrombupge/FernHub/refs/heads/main/DeadRailsFarm", true))()
+    end
+})
+
+local Button = Tab:Button({
+    Title = "10",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+loadstring(game:HttpGet("https://rawscripts.net/raw/Dead-Rails-Alpha-NullFire-32921"))()
+    end
+})
+
+local Button = Tab:Button({
+    Title = "11",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Haxxxxxxxxxxxx/DeadRails/refs/heads/main/HaxWareV2.lua"))()
+    end
+})
+
+local Section = Tab:Section({ 
+    Title = "刷券",
+    TextXAlignment = "Left",
+    TextSize = 17,
+})
+
+local Button = Tab:Button({
+    Title = "刷券1",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+getgenv().AutoExecute = true(loadstring or load)(game:HttpGet("https://raw.githubusercontent.com/hungquan99/HungHUB/main/loader.lua"))()
+    end
+})
+
+local Button = Tab:Button({
+    Title = "刷券2(特别推荐)",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+getgenv().auto_bond=true loadstring(game:HttpGet(' https://raw.githubusercontent.com/m00ndiety/Dead-rails/refs/heads/main/Auto-Win-With-Bonds'))()
+    end
+})
+
+local Button = Tab:Button({
+    Title = "刷券3",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/JsYb666/Item/refs/heads/main/%E5%88%B7%E5%80%BA%E5%88%B8"))()
+    end
+})
+
+local Button = Tab:Button({
+    Title = "刷券4",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+loadstring(request({Url="https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/自动债券Linninew.lua"}).Body)()
+    end
+})
+
+local Button = Tab:Button({
+    Title = "刷券5",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/cryzo-bexz/LionLoader/refs/heads/main/Loader/Lionhub/LionLoader.lua"))()
+    end
+})
+
+local Button = Tab:Button({
+    Title = "刷券6",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/fjruie/newcopybonds.github.io/refs/heads/main/ringtadead.lua"))()
+    end
+})
+
+local Button = Tab:Button({
+    Title = "刷券7",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua"))()
+    end
+})
+
 local Tab = Window:Tab({
     Title = "种植花园",
     Icon = "flower-2",
