@@ -18,7 +18,7 @@ local Window = WindUI:CreateWindow({
         Enabled = true,
         Anonymous = false,
         Callback = function()
-game.Players.LocalPlayer.Name
+            print("clicked")
         end,
     },
 })
