@@ -530,7 +530,8 @@ local Button = Tab:Button({
     Desc = "",
     Locked = false,
     Callback = function()
-getgenv().AutoExecute = true(loadstring or load)(game:HttpGet("https://raw.githubusercontent.com/hungquan99/HungHUB/main/loader.lua"))()
+getgenv().AutoExecute = true
+(loadstring or load)(game:HttpGet("https://raw.githubusercontent.com/hungquan99/HungHUB/main/loader.lua"))()
     end
 })
 
@@ -539,7 +540,8 @@ local Button = Tab:Button({
     Desc = "",
     Locked = false,
     Callback = function()
-getgenv().auto_bond=true loadstring(game:HttpGet(' https://raw.githubusercontent.com/m00ndiety/Dead-rails/refs/heads/main/Auto-Win-With-Bonds'))()
+getgenv().auto_bond=true 
+loadstring(game:HttpGet('https://raw.githubusercontent.com/m00ndiety/Dead-rails/refs/heads/main/Auto-Win-With-Bonds'))()
     end
 })
 
