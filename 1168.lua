@@ -404,3 +404,9 @@ local Button = Tab:Button({
 loadstring(game:HttpGet("https://raw.githubusercontent.com/ArdyBotzz/NatHub/refs/heads/master/NatHub.lua"))()
     end
 })
+
+local Tab = Window:Tab({
+    Title = "种植花园",
+    Icon = "flower-2",
+    Locked = false,
+})
