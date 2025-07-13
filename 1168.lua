@@ -362,11 +362,13 @@ local Tab = Window:Tab({
     Icon = "train-track",
     Locked = false,
 })
+
 local Section = Tab:Section({ 
     Title = "脚本中心",
     TextXAlignment = "middle",
     TextSize = 17,
 })
+
 local Button = Tab:Button({
     Title = "红叶",
     Desc = "",
@@ -608,7 +610,6 @@ script_key = "DonjoSx_Was_Not_Here" -- Script key, don't remove this
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Umbrella-Scripter/Deadrails-Script/refs/heads/main/average-bond-farm.lua"))()
     end
 })
-
 local Tab = Window:Tab({
     Title = "种植花园",
     Icon = "flower-2",
