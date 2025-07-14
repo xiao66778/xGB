@@ -7347,7 +7347,7 @@ local ae=false
 
 
 
-local af=h("搜索","搜索",p.UIElements.SideBarContainer)
+local af=h("搜索","search",p.UIElements.SideBarContainer)
 af.Size=UDim2.new(1,-p.UIPadding/2,0,39)
 af.Position=UDim2.new(0,p.UIPadding/2,0,p.UIPadding/2)
 
