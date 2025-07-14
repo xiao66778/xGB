@@ -5474,7 +5474,7 @@ Icons=a.load'C'
 
 local j=ac("TextBox",{
 Text="",
-PlaceholderText="Search...",
+PlaceholderText="搜索...",
 ThemeTag={
 PlaceholderColor3="Placeholder",
 TextColor3="Text",
