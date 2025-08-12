@@ -6650,7 +6650,7 @@ Icons=a.load'I'
 
 local ak=ae("TextBox",{
 Text="",
-PlaceholderText="Search...",
+PlaceholderText="搜索...",
 ThemeTag={
 PlaceholderColor3="Placeholder",
 TextColor3="Text",
@@ -6744,9 +6744,9 @@ Size=UDim2.new(1,0,1,0),
 BackgroundTransparency=1,
 },{
 ae("ImageLabel",{
-Image=ac.Icon"search"[1],
-ImageRectSize=ac.Icon"search"[2].ImageRectSize,
-ImageRectOffset=ac.Icon"search"[2].ImageRectPosition,
+Image=ac.Icon"搜索"[1],
+ImageRectSize=ac.Icon"搜索"[2].ImageRectSize,
+ImageRectOffset=ac.Icon"搜索"[2].ImageRectPosition,
 BackgroundTransparency=1,
 ThemeTag={
 ImageColor3="Icon",
