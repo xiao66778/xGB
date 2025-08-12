@@ -6744,9 +6744,9 @@ Size=UDim2.new(1,0,1,0),
 BackgroundTransparency=1,
 },{
 ae("ImageLabel",{
-Image=ac.Icon"搜索"[1],
-ImageRectSize=ac.Icon"搜索"[2].ImageRectSize,
-ImageRectOffset=ac.Icon"搜索"[2].ImageRectPosition,
+Image=ac.Icon"search"[1],
+ImageRectSize=ac.Icon"search"[2].ImageRectSize,
+ImageRectOffset=ac.Icon"search"[2].ImageRectPosition,
 BackgroundTransparency=1,
 ThemeTag={
 ImageColor3="Icon",
@@ -8505,7 +8505,7 @@ local m=false
 
 
 
-local p=ah("Search","search",an.UIElements.SideBarContainer)
+local p=ah("搜索","搜索",an.UIElements.SideBarContainer)
 p.Size=UDim2.new(1,-an.UIPadding/2,0,39)
 p.Position=UDim2.new(0,an.UIPadding/2,0,an.UIPadding/2)
 
