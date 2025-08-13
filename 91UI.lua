@@ -1433,7 +1433,7 @@ TextSize=20
 local ar=ac("TextLabel",{
 AutomaticSize="XY",
 BackgroundTransparency=1,
-Text="Key System",
+Text="卡密系统",
 AnchorPoint=Vector2.new(1,0.5),
 Position=UDim2.new(1,0,0.5,0),
 TextTransparency=1,
@@ -1782,8 +1782,8 @@ end)
 ab.AddSignal(v.MouseButton1Click,function()
 m.Copy()
 ag.WindUI:Notify{
-Title="Key System",
-Content="Key link copied to clipboard.",
+Title="卡密系统",
+Content="卡密链接已成功复制到剪贴版",
 Image="key",
 }
 end)
