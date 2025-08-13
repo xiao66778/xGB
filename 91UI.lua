@@ -780,7 +780,7 @@ else
 return true
 end
 else
-ah"key is invalid.";
+ah"卡密无效";
 return false
 end
 else
@@ -841,7 +841,7 @@ else
 if an(az,1,4)=="KEY_"then
 return true,ay(az)
 else
-return false,("Key is invalid.")
+return false,("卡密无效")
 end
 end
 else
@@ -1843,7 +1843,7 @@ if aB then
 handleSuccess(az)
 else
 ag.WindUI:Notify{
-Title="Key System. Error",
+Title="卡密错误",
 Content=aC,
 Icon="triangle-alert",
 }
