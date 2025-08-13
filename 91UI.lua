@@ -1585,7 +1585,7 @@ ay.AnchorPoint=Vector2.new(0,1)
 end
 
 if ag.KeySystem.URL then
-ae("获取卡密","key",function()
+ae("获取卡密链接","key",function()
 setclipboard(ag.KeySystem.URL)
 end,"Secondary",aw.Frame)
 end
@@ -1601,7 +1601,7 @@ if ag.KeySystem.API then
 
 local az=240
 local aA=false
-local aB=ae("获取卡密","key",nil,"Secondary",aw.Frame)
+local aB=ae("获取卡密链接","key",nil,"Secondary",aw.Frame)
 
 local aC=ab.NewRoundFrame(99,"Squircle",{
 Size=UDim2.new(0,1,1,0),
