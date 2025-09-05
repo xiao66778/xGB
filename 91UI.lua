@@ -1939,7 +1939,7 @@ BackgroundTransparency=1,
 as,ar,
 })
 
-local au=af("Enter Key","key",nil,"Input",function(au)
+local au=af("请输入卡密","key",nil,"Input",function(au)
 am=au
 end)
 
@@ -2056,7 +2056,7 @@ ay.AnchorPoint=Vector2.new(0,1)
 end
 
 if ag.KeySystem.URL then
-ae("点我获取卡密链接","key",function()
+ae("获取卡密链接","key",function()
 setclipboard(ag.KeySystem.URL)
 end,"Secondary",aw.Frame)
 end
@@ -2072,7 +2072,7 @@ if ag.KeySystem.API then
 
 local az=240
 local aA=false
-local aB=ae("点我复制卡密链接","key",nil,"Secondary",aw.Frame)
+local aB=ae("复制卡密链接","key",nil,"Secondary",aw.Frame)
 
 local aC=ab.NewRoundFrame(99,"Squircle",{
 Size=UDim2.new(0,1,1,0),
