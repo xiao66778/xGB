@@ -7586,7 +7586,7 @@ Icons=a.load'R'
 
 local ak=ae("TextBox",{
 Text="",
-PlaceholderText="Search...",
+PlaceholderText="搜索...",
 ThemeTag={
 PlaceholderColor3="Placeholder",
 TextColor3="Text",
@@ -9430,17 +9430,17 @@ ao:CreateTopbarButton("Close","x",function()
 ah(ao.UIElements.Main,0.35,{Position=UDim2.new(0.5,0,0.5,0)},Enum.EasingStyle.Quint,Enum.EasingDirection.Out):Play()
 ao:Dialog{
 
-Title="Close Window",
-Content="Do you want to close this window? You will not be able to open it again.",
+Title="关闭窗口",
+Content="您要关闭此窗口吗？您将无法再次打开它。",
 Buttons={
 {
-Title="Cancel",
+Title="取消",
 
 Callback=function()end,
 Variant="Secondary",
 },
 {
-Title="Close Window",
+Title="关闭窗口",
 
 Callback=function()ao:Close():Destroy()end,
 Variant="Primary",
@@ -9527,7 +9527,7 @@ local A=false
 
 
 
-local B=ai("Search","search",ao.UIElements.SideBarContainer)
+local B=ai("搜索","search",ao.UIElements.SideBarContainer)
 B.Size=UDim2.new(1,-ao.UIPadding/2,0,39)
 B.Position=UDim2.new(0,ao.UIPadding/2,0,ao.UIPadding/2)
 
@@ -9807,7 +9807,7 @@ as.WindUI=aa
 as.Parent=aa.ScreenGui.Window
 
 if aa.Window then
-warn"You cannot create more than one window"
+warn"你不能创建多个窗口"
 return
 end
 
