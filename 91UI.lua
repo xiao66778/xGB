@@ -1043,12 +1043,12 @@ ah(ax.message);
 return false,ax.message
 end
 elseif aw.StatusCode==429 then
-local ax="you are being rate limited, please wait 20 seconds and try again.";
+local ax="您的速率受到限制，请等待 20 秒后重试。";
 ah(ax);
 return false,ax
 end
 
-local ax="Failed to cache link.";
+local ax="复制链接失败。";
 ah(ax);
 return false,ax
 else
@@ -1072,7 +1072,7 @@ for ax=1,5 do
 local ay=aw();
 task.wait(0.2)
 if aw()==ay then
-local az="platoboost nonce error.";
+local az="platoboost nonce 错误。";
 ah(az);
 error(az);
 end
@@ -1119,19 +1119,19 @@ if ag then
 if aD.data.hash==_("true".."-"..az.."-"..af)then
 return true
 else
-ah"failed to verify integrity.";
+ah"未能验证完整性。";
 return false
 end
 else
 return true
 end
 else
-ah"key is invalid.";
+ah"卡密无效。";
 return false
 end
 else
 if an(aD.message,1,27)=="unique constraint violation"then
-ah"you already have an active key, please wait for it to expire before redeeming it.";
+ah"您已经有一个有效卡密，请等待其过期后再兑换。";
 return false
 else
 ah(aD.message);
@@ -1139,10 +1139,10 @@ return false
 end
 end
 elseif aC.StatusCode==429 then
-ah"you are being rate limited, please wait 20 seconds and try again.";
+ah"您的速率受到限制，请等待 20 秒后重试。";
 return false
 else
-ah"server returned an invalid status code, please try again later.";
+ah"服务器返回无效的状态代码，请稍后重试。";
 return false
 end
 end
@@ -1150,7 +1150,7 @@ end
 
 local az=function(az)
 if ai==true then
-return false,("A request is already being sent, please slow down.")
+return false,("请求已在发送，请放慢速度。")
 else
 ai=true;
 end
@@ -1178,7 +1178,7 @@ if ag then
 if aD.data.hash==_("true".."-"..aA.."-"..af)then
 return true,""
 else
-return false,("failed to verify integrity.")
+return false,("未能验证完整性。")
 end
 else
 return true
@@ -1187,16 +1187,16 @@ else
 if an(az,1,4)=="KEY_"then
 return true,ay(az)
 else
-return false,("Key is invalid.")
+return false,("卡密无效。")
 end
 end
 else
 return false,(aD.message)
 end
 elseif aC.StatusCode==429 then
-return false,("You are being rate limited, please wait 20 seconds and try again.")
+return false,("您的速率受到限制，请等待 20 秒后重试。")
 else
-return false,("Server returned an invalid status code, please try again later.")
+return false,("服务器返回无效的状态代码，请稍后重试。")
 end
 end
 
@@ -1222,7 +1222,7 @@ if ag then
 if aE.data.hash==_(am(aE.data.value).."-"..aB.."-"..af)then
 return aE.data.value
 else
-ah"failed to verify integrity.";
+ah"未能验证完整性。";
 return nil
 end
 else
