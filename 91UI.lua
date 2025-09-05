@@ -1007,13 +1007,13 @@ local aj,ak,al,am,an,ao,ap,aq,ar=setclipboard or toclipboard,request or http_req
 local as,at="",0;
 
 
-local au="https://api.platorelay.com";
+local au="https://api.platoboost.app";
 local av=ak{
 Url=au.."/public/connectivity",
 Method="GET"
 };
 if av.StatusCode~=200 or av.StatusCode~=429 then
-au="https://api.platorelay.com";
+au="https://api.platoboost.app";
 end
 
 
