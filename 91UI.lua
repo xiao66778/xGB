@@ -1903,7 +1903,7 @@ TextSize=20
 local ar=ac("TextLabel",{
 AutomaticSize="XY",
 BackgroundTransparency=1,
-Text="Key System",
+Text="卡密系统",
 AnchorPoint=Vector2.new(1,0.5),
 Position=UDim2.new(1,0,0.5,0),
 TextTransparency=1,
@@ -2044,7 +2044,7 @@ PaddingBottom=UDim.new(0,16),
 
 
 
-local ay=ae("Exit","log-out",function()
+local ay=ae("退出","log-out",function()
 ak:Close()()
 end,"Tertiary",aw.Frame)
 
@@ -2056,7 +2056,7 @@ ay.AnchorPoint=Vector2.new(0,1)
 end
 
 if ag.KeySystem.URL then
-ae("Get key","key",function()
+ae("点我获取卡密链接","key",function()
 setclipboard(ag.KeySystem.URL)
 end,"Secondary",aw.Frame)
 end
@@ -2072,7 +2072,7 @@ if ag.KeySystem.API then
 
 local az=240
 local aA=false
-local aB=ae("Get key","key",nil,"Secondary",aw.Frame)
+local aB=ae("点我复制卡密链接","key",nil,"Secondary",aw.Frame)
 
 local aC=ab.NewRoundFrame(99,"Squircle",{
 Size=UDim2.new(0,1,1,0),
@@ -2253,8 +2253,8 @@ end)
 ab.AddSignal(r.MouseButton1Click,function()
 m.Copy()
 ag.WindUI:Notify{
-Title="Key System",
-Content="Key link copied to clipboard.",
+Title="卡密系统",
+Content="链接已复制到剪贴板。",
 Image="key",
 }
 end)
@@ -2281,7 +2281,7 @@ task.wait(.4)
 ai(true)
 end
 
-local az=ae("Submit","arrow-right",function()
+local az=ae("验证卡密","arrow-right",function()
 local az=tostring(am or"empty")local aA=
 ag.Folder or ag.Title
 
@@ -2314,7 +2314,7 @@ if aB then
 handleSuccess(az)
 else
 ag.WindUI:Notify{
-Title="Key System. Error",
+Title="卡密系统错误",
 Content=aC,
 Icon="triangle-alert",
 }
