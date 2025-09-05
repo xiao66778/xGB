@@ -2145,7 +2145,7 @@ aE
 })
 
 ac("TextLabel",{
-Text="Select Service",
+Text="选择一个卡密链接",
 BackgroundTransparency=1,
 FontFace=Font.new(ab.Font,Enum.FontWeight.Medium),
 ThemeTag={TextColor3="Text"},
