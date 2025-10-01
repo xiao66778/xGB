@@ -2145,7 +2145,7 @@ aE
 })
 
 ac("TextLabel",{
-Text="Select Service",
+Text="选择服务",
 BackgroundTransparency=1,
 FontFace=Font.new(ab.Font,Enum.FontWeight.Medium),
 ThemeTag={TextColor3="Text"},
@@ -2281,7 +2281,7 @@ task.wait(.4)
 ai(true)
 end
 
-local az=ae("Submit","arrow-right",function()
+local az=ae("验证卡密","arrow-right",function()
 local az=tostring(am or"empty")local aA=
 ag.Folder or ag.Title
 
