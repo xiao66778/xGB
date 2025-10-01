@@ -7212,12 +7212,12 @@ HorizontalAlignment="Right",
 
 local v={
 {
-Title="Cancel",
+Title="取消",
 Variant="Secondary",
 Callback=function()end
 },
 {
-Title="Apply",
+Title="申请",
 Icon="chevron-right",
 Variant="Primary",
 Callback=function()av(Color3.fromHSV(aw.Hue,aw.Sat,aw.Vib),aw.Transparency)end
