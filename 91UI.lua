@@ -750,7 +750,7 @@ local N,O=pcall(getcustomasset,L)
 if N then
 J.ImageLabel.Image=O
 else
-warn(string.format("[ WindUI.Creator ] Failed to load custom asset '%s': %s",L,tostring(O)))
+warn(string.format("[ WindUI.Creator ] 加载自定义资源失败 '%s': %s",L,tostring(O)))
 J:Destroy()
 
 return
@@ -758,7 +758,7 @@ end
 end)
 end)
 if not M then
-warn("[ WindUI.Creator ]  '"..identifyexecutor().."' doesnt support the URL Images. Error: "..N)
+warn("[ WindUI.Creator ]  '"..identifyexecutor().."' 不支持 URL 图片。错误: "..N)
 
 J:Destroy()
 end
@@ -1129,7 +1129,7 @@ Url=au.."/public/connectivity",
 Method="GET"
 };
 if av.StatusCode~=200 and av.StatusCode~=429 then
-au="https://api.platoboost.net";
+au="https://api.platoboost.app";
 end
 
 
@@ -1160,12 +1160,12 @@ ah(ax.message);
 return false,ax.message
 end
 elseif aw.StatusCode==429 then
-local ax="you are being rate limited, please wait 20 seconds and try again.";
+local ax="您目前受到速率限制，请等待 20 秒后再试。";
 ah(ax);
 return false,ax
 end
 
-local ax="Failed to cache link.";
+local ax="链接缓存失败。";
 ah(ax);
 return false,ax
 else
@@ -1189,7 +1189,7 @@ for ax=1,5 do
 local ay=aw();
 task.wait(0.2)
 if aw()==ay then
-local az="platoboost nonce error.";
+local az="platoboost nonce 错误。";
 ah(az);
 error(az);
 end
@@ -1236,19 +1236,19 @@ if ag then
 if aD.data.hash==_("true".."-"..az.."-"..af)then
 return true
 else
-ah"failed to verify integrity.";
+ah"未能验证完整性。";
 return false
 end
 else
 return true
 end
 else
-ah"key is invalid.";
+ah"密钥无效。";
 return false
 end
 else
 if an(aD.message,1,27)=="unique constraint violation"then
-ah"you already have an active key, please wait for it to expire before redeeming it.";
+ah"您已拥有有效密钥，请等待其过期后再进行兑换。";
 return false
 else
 ah(aD.message);
@@ -1256,10 +1256,10 @@ return false
 end
 end
 elseif aC.StatusCode==429 then
-ah"you are being rate limited, please wait 20 seconds and try again.";
+ah"您目前受到速率限制，请等待 20 秒后再试。";
 return false
 else
-ah"server returned an invalid status code, please try again later.";
+ah"服务器返回了无效的状态码，请稍后再试。";
 return false
 end
 end
@@ -1267,7 +1267,7 @@ end
 
 local az=function(az)
 if ai==true then
-return false,("A request is already being sent, please slow down.")
+return false,("请求正在发送中，请稍等片刻。")
 else
 ai=true;
 end
@@ -1295,7 +1295,7 @@ if ag then
 if aD.data.hash==_("true".."-"..aA.."-"..af)then
 return true,""
 else
-return false,("failed to verify integrity.")
+return false,("未能验证完整性。")
 end
 else
 return true
@@ -1304,16 +1304,16 @@ else
 if an(az,1,4)=="KEY_"then
 return true,ay(az)
 else
-return false,("Key is invalid.")
+return false,("密钥无效。")
 end
 end
 else
 return false,(aD.message)
 end
 elseif aC.StatusCode==429 then
-return false,("You are being rate limited, please wait 20 seconds and try again.")
+return false,("您目前受到速率限制，请等待 20 秒后再试。")
 else
-return false,("Server returned an invalid status code, please try again later.")
+return false,("服务器返回了无效的状态码，请稍后再试。")
 end
 end
 
@@ -1339,7 +1339,7 @@ if ag then
 if aE.data.hash==_(am(aE.data.value).."-"..aB.."-"..af)then
 return aE.data.value
 else
-ah"failed to verify integrity.";
+ah"未能验证完整性。";
 return nil
 end
 else
@@ -6319,7 +6319,7 @@ am.Tabs={}
 
 if am.SearchBarEnabled then
 if not ar then
-ar=ah("Search...","search",am.UIElements.Menu,nil,function(aw)
+ar=ah("搜索...","search",am.UIElements.Menu,nil,function(aw)
 for ax,ay in next,am.Tabs do
 if string.find(string.lower(ay.Name),string.lower(aw),1,true)then
 ay.UIElements.TabItem.Visible=true
@@ -9174,7 +9174,7 @@ Icons=a.load'V'
 
 local an=ag("TextBox",{
 Text="",
-PlaceholderText="Search...",
+PlaceholderText="搜索...",
 ThemeTag={
 PlaceholderColor3="Placeholder",
 TextColor3="Text",
@@ -11281,17 +11281,17 @@ if not ar.IgnoreAlerts then
 ar:SetToTheCenter()
 ar:Dialog{
 
-Title="Close Window",
-Content="Do you want to close this window? You will not be able to open it again.",
+Title="关闭窗口",
+Content="您要关闭此窗口吗？您将无法再次打开它。",
 Buttons={
 {
-Title="Cancel",
+Title="取消",
 
 Callback=function()end,
 Variant="Secondary",
 },
 {
-Title="Close Window",
+Title="关闭窗口",
 
 Callback=function()ar:Destroy()end,
 Variant="Primary",
@@ -11434,7 +11434,7 @@ local G=false
 
 
 
-local H=al("Search","search",ar.UIElements.SideBarContainer,true)
+local H=al("搜索","search",ar.UIElements.SideBarContainer,true)
 H.Size=UDim2.new(1,-ar.UIPadding/2,0,39)
 H.Position=UDim2.new(0,ar.UIPadding/2,0,ar.UIPadding/2)
 
