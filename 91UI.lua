@@ -80,7 +80,7 @@ j.SetIconsType"lucide"
 local l
 
 local m={
-Font="rbxassetid://12187365364",
+Font="rbxassetid://12187360881",
 Localization=nil,
 CanDraggable=true,
 Theme=nil,
